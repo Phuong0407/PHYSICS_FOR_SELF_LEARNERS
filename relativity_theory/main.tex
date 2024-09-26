@@ -6,17 +6,83 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass{book}
+\documentclass[12pt]{book}
 
+\usepackage{enumitem}
+\usepackage{pifont}
+\newcommand{\trianglebullet}{\ding{115}}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
 \usepackage[utf8]{inputenc}
 \usepackage[vietnamese]{babel}
 \usepackage{txfonts}
 % \usepackage{lmodern}
-\usepackage{amsmath}
 \usepackage{siunitx}
 
 \usepackage[paperwidth=19cm,paperheight=27cm,top=2cm,bottom=2cm,inner=2cm,outer=2cm]{geometry}
 
+\newcounter{paranum}
+\newcommand{\nparagraph}{\noindent\refstepcounter{paranum}\textbf{\theparanum.}\ }
+\newcommand{\trianglebold}[1]{\noindent$\blacktriangleright\ $\textbf{#1}\textbf{:}}
+
 \begin{document}
+\chapter{Các Hiện-tượng ở Tốc-độ Cở-ánh-sáng}
+
+Trong vật-lý-học cổ-điển, chúng-ta đã làm-quen với phép-biến-đổi Galilee. Hơn-nữa, chúng-ta biết rằng sóng điện-từ, nghiệm-đúng hệ-phương-trình của Maxwell, lan-truyền với tốc-độ của ánh-sáng trong chân-không $c=\SI{299792458}{\metre\per\second}$. Điều này làm nảy-sinh một câu-hỏi tự-nhiên là một vật đang chuyển-động mà phát-ra các sóng điện-từ, chẳng-hạn như các xe-lửa cần đồng-bộ-hóa đồng-hồ của chúng với đồng hồ của nhà-ga đến khi di-chuyển từ nhà-ga này sang này sang nhà-ga khác, thì có ảnh-hưởng gì đến vận-tốc của tín-hiệu được gửi-đi hay không?
+
+Thí nghiệm \textsc{Michelson-Morley} chứng tỏ rằng vận-tốc ánh sáng là không đổi, bất chấp hệ-quy-chiếu và người quan sát.
+
+Bây-giờ chúng-ta nghiên-cứu tác-động của phép-biến-đổi Galilee lên hệ phương-trình Maxwell. %Xét một hệ-quy-chiếu Galilee $(O,\vec{\textbf{e}}_1)$
+
+\section{Sự-không-tương-thích giữa trường điện-từ và phép-biến-đổi Galilee}
+
+\nparagraph Phép biến đổi Galilee chứng tỏ rằng lực tác động lên một chất điểm là không đổi trong mọi hệ-quy-chiếu quán tính, điều này có nghĩa là dù cho chúng ta đứng yên trong một hệ-quy-chiếu quán tính hay chúng ta chuyển động với vận tốc không đổi, chúng ta thấy rằng lực tác động lên chất điểm là giống nhau. Bây giờ chúng ta sẽ chứng minh điều này là sai đối với trường hợp lực điện-từ.
+
+\nparagraph Trong một hệ-quy-chiếu quán tính $\mathscr{R}$ với hệ trục tọa độ $(O,\vec{\textbf{e}}_x,\vec{\textbf{e}}_y,\vec{\textbf{e}}_z)$, có một sợi dây điện dài vô hạn có mật độ điện tích dài là $\lambda$ đặt theo hướng của trục $Oz$. Sợi-dây này đứng-yên trong hệ-quy-chiếu $\mathscr{R}$.
+
+\trianglebold{Lực Lorentz trong hệ-quy-chiếu $\mathscr{R}$} Như vậy, vì sợi-dây được-đặt cố-định trong hệ-quy-chiếu $\mathscr{R}$, cường-độ điện-trường được viết trong hệ tọa-độ trụ:
+\begin{align}
+    \vec{E}=\dfrac{\lambda}{2\pi\varepsilon_0}\dfrac{\vec{\textbf{e}}_r}{r}.
+\end{align}
+Trong hệ-quy-chiếu này, sợi-dây không chuyển-động nên không có dòng-điện được-tạo-ra và do đó không có từ-trường được-tạo-ra.
+
+Xét một điện tích $q$ đứng yên trong hệ-quy-chiếu này và cách sợi dây một khoảng cách $R$, điện-tích này chịu lực \textsc{Lorentz} dưới dạng:
+\begin{align}
+    \vec{F}=q\vec{E}=\dfrac{q\lambda}{2\pi\varepsilon_0}\dfrac{\vec{\textbf{e}}_r}{r}
+\end{align}
+
+\trianglebold{Lực Lorentz trong hệ-quy-chiếu chuyển động}
+Bây giờ chúng ta đứng-yên trong hệ-quy-chiếu quán tính $\mathscr{R}'$ chuyển động tịnh tiến với vận tốc $\vec{v}=v\vec{\textbf{e}}_z$ so với $\mathscr{R}$. Như-vậy, trong hệ-quy-chiếu này, sợi dây chuyển động với vận tốc $-\vec{v}=-v\vec{\textbf{e}}_z$. Sợi dây luôn có mật độ điện tích dài là $\lambda$ nhưng lúc này sợi dây tạo ra một dòng điện mà mật độ điện dài của nó được viết bởi $\vec{j}=-\lambda v\vec{\textbf{e}}_z$. Sợi dây này tạo ra điện trường và từ trường dưới dạng:
+\begin{align}
+    \vec{E}'=\dfrac{\lambda}{2\pi\varepsilon_0}\dfrac{\vec{\textbf{e}}_r}{r}\quad\text{và}\quad\vec{B}'=\dfrac{\mu_0\lambda v}{2\pi}\dfrac{\vec{\textbf{e}}_\theta}{r}.
+\end{align}
+Trong hệ-quy-chiếu này, điện tích chuyển động với vận tốc $-\vec{v}=-v\vec{\textbf{e}}_z$. Lực \textsc{Lorentz} tác dụng lên điện-tích này có dạng
+\begin{align}
+    \vec{F}'=q\vec{E}'+q(-\vec{v})\times\vec{B}'=\dfrac{q\lambda}{2\pi\varepsilon_0}\dfrac{\vec{\textbf{e}}_r}{r}+q\dfrac{\mu_0\lambda v^2}{2\pi}\dfrac{\vec{\textbf{e}}_r}{r}=\dfrac{q\lambda}{2\pi\varepsilon_0}\left(1+\dfrac{v^2}{c^2}\right)\vec{\textbf{e}}_r.
+\end{align}
+
+% Một phương pháp tiếp cận tương tự, trong đó giả thuyết rằng lực Lorentz là không đổi, điều này cho chúng ta kết quả
+% \begin{align}
+%     sdfsdf
+% \end{align}
+
+\trianglebold{Kết luận}
+Như vậy, lực Lorentz trong hai hệ-quy-chiếu quán tính này là khác nhau bởi một thừa số $1+v^2/c^2$. Điều này sẽ không xảy ra nếu như $c$ là vô hạn hay $v=0$, tuy nhiên $c$ là hữu hạn và vận tốc chuyển động $v$ luôn luôn khác không. Điều này không tương thích với những kết luận của phép biến đổi Galilee, khi nó nói rằng lực tác động lên hạt điện tích là bất biến với mọi hệ quy chiếu quán tính. 
+
+
+Một sự không nhất quán như vậy: phép-biến-đổi Galilee được áp dụng cho vận tốc chuyển-động của điện-tích và của sợi dây điện, dẫn đến việc sợi dây tạo ra dòng điện thông qua từ trường và điện tích di chuyển trong từ trường này lại tạo ra một sự không tương-đồng của lực Lorentz trong hai trường hợp. Điều này tạo ra những kết luận lý thuyết tự mâu thuẩn và sẽ không phù hợp với thực tế.
+
+Một phép biến đổi tương tự, trong đó giả thuyết về sự tương đồng của lực Lorentz, dẫn đến một kết quả khác. Cụ thế là, vẫn trong hệ quy chiếu $\mathscr{R}$ ở bên trên, xét một trường điện từ có dạng $(\vec{E},\vec{B})$; còn trong hệ quy chiếu $\mathscr{R}'$ điện trường đó có biểu thức tương đương là $(\vec{E}',\vec{B}')$. Như vậy, với giả thuyết lực Lorentz là bằng nhau, chúng ta thu được:
+\begin{align}
+    q(\vec{E}+\vec{v}\times\vec{B})=q(\vec{E}'+(\vec{v}-\vec{v}_e)\times\vec{B}')\Longleftrightarrow \vec{E}=\vec{E}'+\vec{v}_e\times\vec{B}'\ \text{và}\ \vec{B}=\vec{B}'.
+\end{align}
+Điều này gây ra một điều bất ngờ lớn vì từ trường là không phụ thuộc vào hệ quy chiếu, còn điện trường thì có. Điều này hiển nhiên là sai trong trường hợp sợi dây dẫn điện của chúng ta.
+
+Như vậy phép biến đổi Galilee là không phù hợp với thực nghiệm ở các hiện tượng diễn ra ở vận tốc so sánh được với vận tốc ánh sáng. Do-đó, chúng ta cần tìm một hệ thống vật lý mới để giải thích được những kết quả này.
+
+\nparagraph Chúng ta chỉ có một cách để giải thích sự không-tương-thích này bằng việc thay thế một trong hai, hoặc là phép biến đổi Galilee, hoặc là các phương trình Maxwell. Tuy nhiên, các phương trình Maxwell đã chứng minh được độ-khả-tín của nó thông qua các hiện tượng vật lý như sự truyền thư điện-tín hay sự đồng bộ hóa các đồng hồ đã chuyển động sử dụng sóng điện từ.
+
+Như vậy, chúng ta sẽ cải tiến hoặc loại bỏ phép-biến-đổi Galilee, bởi vì, khi thiết lập phép biến đổi Galilee, các phép-đo khoảng-cách và khoảng thời-gian được thực hiện cho các hiện tượng diễn ra với tốc độ không quá cao. Do đó, chúng ta sẽ cải tiến phép biến đổi Galilee vì nó chưa bao-quát hết-được các hiện tượng.
 
 \end{document}
